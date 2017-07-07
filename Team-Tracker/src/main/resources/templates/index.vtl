@@ -1,4 +1,13 @@
-<h1> Member List </h1>
+<h1> Member List of Team 1 </h1>
+#if ($members)
+<h3>Current Members:</h3>
+<ul>
+  #foreach ($member in $members)
+  <li> $member.getMemberName() </li>
+</ul>
+#else
+  <p>No members! </p>
+#end
 
 <p> Add a new member: </p>
 
