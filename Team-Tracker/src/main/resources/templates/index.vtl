@@ -1,9 +1,10 @@
 <h1> Member List of Team 1 </h1>
-#if ($members)
 <h3>Current Members:</h3>
+#if ($members)
 <ul>
   #foreach ($member in $members)
-  <li> $member.getMemberName() </li>
+    <li> $member.getMemberName() </li>
+  #end
 </ul>
 #else
   <p>No members! </p>

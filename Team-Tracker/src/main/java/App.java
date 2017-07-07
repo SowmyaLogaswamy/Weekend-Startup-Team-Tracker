@@ -12,7 +12,7 @@ public class App {
 
     get("/", (request, response) -> {
       Map<String, Object>model = new HashMap<String, Object>();
-      model.put("member", request.session().attribute("member"));
+      model.put("members", request.session().attribute("members"));
       model.put("template", "templates/index.vtl");
       return new ModelAndView(model,layout);
     }, new VelocityTemplateEngine());
