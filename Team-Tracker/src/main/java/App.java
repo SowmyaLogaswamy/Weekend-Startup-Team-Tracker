@@ -88,6 +88,17 @@ public class App {
       return new ModelAndView(model, "templates/member.vtl");
     }, new VelocityTemplateEngine());
 
-
+    get("/teams/:id", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      String id = request.params(":id");
+      Integer userInputId = Integer.parseInt(id);
+      ArrayList<Team> teams = request.session().attribute("teams");
+      for(Team team: teams) {
+        if(team.getTeamId() == userInputId) {
+          model.put("team", team);
+        }
+      }
+      return new ModelAndView(model, "templates/member.vtl");
+    }, new VelocityTemplateEngine());
   }
 }
