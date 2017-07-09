@@ -1,0 +1,30 @@
+<h1> Team List </h1>
+<h3>Current Teams:</h3>
+#if ($teams)
+<ul>
+  #foreach ($team in $teams)
+  <li>
+    <a href="/teams/$team.getTeamId()">$team.getNameForTeam()</a>
+   </li>
+  #end
+</ul>
+#else
+  <p>No teams! </p>
+#end
+
+<p> Add a new Team: </p>
+
+<form action = "/teams" method="post">
+
+  <label for="id"> Team ID </label>
+  <input id="id" name="id" type="text"><br>
+
+  <label for="teamname"> Team Name </label>
+  <input id="teamname" name="teamnname" type="text"><br>
+
+  <label for="details"> Team Details </label>
+  <input id="details" name="details" type="text"><br>
+
+  <button type="submit class="btn"> Add Team</button>
+
+</form>

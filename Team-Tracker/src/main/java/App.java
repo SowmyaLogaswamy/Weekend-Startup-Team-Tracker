@@ -12,8 +12,41 @@ public class App {
 
     get("/", (request, response) -> {
       Map<String, Object>model = new HashMap<String, Object>();
-      model.put("members", request.session().attribute("members"));
       model.put("template", "templates/index.vtl");
+      return new ModelAndView(model,layout);
+    }, new VelocityTemplateEngine());
+
+    get("/teams", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      model.put("template", "templates/indexteam.vtl");
+      model.put("teams", request.session().attribute("teams"));
+      return new ModelAndView(model,layout);
+    }, new VelocityTemplateEngine());
+
+    post("/teams", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      Integer userInputId = Integer.parseInt(request.queryParams("id"));
+      String userInputName = request.queryParams("teamname");
+      String userInputDescription = request.queryParams("details");
+      Team newteam = new Team(userInputId, userInputName, userInputDescription);
+
+      ArrayList<Team> teams = request.session().attribute("teams");
+      if(teams == null)
+      {
+          teams = new ArrayList<Team>();
+          request.session().attribute("teams", teams);
+      }
+
+      teams.add(newteam);
+      model.put("template", "templates/indexteam.vtl");
+      model.put("teams", request.session().attribute("teams"));
+      return new ModelAndView(model,layout);
+    }, new VelocityTemplateEngine());
+
+    get("/members", (request, response) -> {
+      Map<String, Object>model = new HashMap<String, Object>();
+      model.put("members", request.session().attribute("members"));
+      model.put("template", "templates/indexmembers.vtl");
       return new ModelAndView(model,layout);
     }, new VelocityTemplateEngine());
 
@@ -40,5 +73,21 @@ public class App {
       model.put("template", "templates/success.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
+
+    get("/members/:id", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      String id = request.params(":id");
+      Integer userInputId = Integer.parseInt(id);
+      ArrayList<Member> members = request.session().attribute("members");
+      for(Member member: members)
+      {
+        if(member.getMemberId() == userInputId) {
+          model.put("member", member);
+        }
+      }
+      return new ModelAndView(model, "templates/member.vtl");
+    }, new VelocityTemplateEngine());
+
+
   }
 }
