@@ -17,11 +17,11 @@ public int getTeamId() {
 }
 
 public String getDescription() {
-  return mTeamName;
+  return mTeamDescription;
 }
 
 public String getTeamName() {
-  return mTeamDescription;
+  return mTeamName;
 }
 
 public ArrayList<Member> getMembers() {

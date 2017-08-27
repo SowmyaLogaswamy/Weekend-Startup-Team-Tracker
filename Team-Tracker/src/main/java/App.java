@@ -98,7 +98,7 @@ public class App {
           model.put("team", team);
         }
       }
-      return new ModelAndView(model, "templates/member.vtl");
+      return new ModelAndView(model, "templates/team.vtl");
     }, new VelocityTemplateEngine());
   }
 }
