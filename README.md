@@ -23,14 +23,14 @@ https://github.com/SowmyaLogaswamy
  * Test, Deploy and enhance the features based on the customer needs.
 
 ##### Graduate Research Assistant, Coimbatore, India    			                                 June 2014 – March 2015
-###### _Project_- **_Ontology Based Data Integration with Quality of Service_**	
+######  _Project_- **_Ontology Based Data Integration with Quality of Service_**	
  * The objective is to resolve the semantic heterogeneity and improve the accuracy of the data 
  * Worked on Data Integration process to integrate data residing at various heterogeneous databases like My SQL, MS access and SQL server 
  * Built a local and a global schema for creating Ontology for the application Disaster Management 
  * Worked in Protégé tool to map the schema
  * Worked on duplicate detection, query processing and data merging  
 
-##### Blazon, Coimbatore, India                                                                                   July 2012 - July 2013
+#####  Blazon, Coimbatore, India                                                                                   July 2012 - July 2013
 (http://blazon.in](http://blazon.in)	
  * Extended the vehicle maintenance system to work for the auto maintenance industry with special needs.
  * Work with product management to understand the customer needs.
@@ -51,10 +51,10 @@ Java, JavaScript, Angular, Ember, HTML, CSS, Bootstrap, PostgreSQL/SQL, Git, And
 
 #### PROJECTS
 ```
-##### **_Hackathon-War_** (Technologies used: Typescript, Angular, Firebase, Bootstrap)
+#####  **_Hackathon-War_** (Technologies used: Typescript, Angular, Firebase, Bootstrap)
 Hackathon-war is an application that manages the teams that participated in the hackathon event. User will be able to visit the page to see a list of all teams, clicks a team to visit their profile page. All their data is stored in the database. Admin can add, update and delete a team’s profile.
 https://github.com/SowmyaLogaswamy/Hackathon-War-js.git
-##### **_Ask-Me-Anything_** (Technologies used: javaScript, Ember, Firebase, bootstrap)
+#####  **_Ask-Me-Anything_** (Technologies used: javaScript, Ember, Firebase, bootstrap)
 A crowd sourced website developed for Senior Developers & Tech Pros. The goal of this website is to create a question and answer message board, similar to Reddit, Quora, StackOverflow or other such sites. Users should be able to submit a question, then other users can respond with answers. https://github.com/SowmyaLogaswamy/Ask-Me-Anything-js.git
 ```
 
